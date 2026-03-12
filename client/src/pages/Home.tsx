@@ -4,7 +4,7 @@ import { Link as ScrollLink } from "react-scroll";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { 
-  ArrowRight, Linkedin, Mail, MapPin, Phone, 
+  ArrowRight, Download, Linkedin, Mail, MapPin, Phone, 
   Terminal, ShieldCheck, Database, Layout, Users, FileSpreadsheet, 
   Briefcase, GraduationCap, CheckCircle2, Send, ExternalLink
 } from "lucide-react";
@@ -617,12 +617,20 @@ export default function Home() {
                 ✕
               </button>
             </div>
-            <div className="w-full h-[70vh]">
-              <iframe
-                src="/cybersecurity-certificate.pdf"
-                className="w-full h-full"
-                title="Cybersecurity Essentials Certificate"
-              />
+            <div className="w-full h-[70vh] flex flex-col items-center justify-center bg-muted/30 gap-6">
+              <ShieldCheck className="w-16 h-16 text-primary/40" />
+              <div className="text-center px-6">
+                <h3 className="text-xl font-bold mb-2">Cybersecurity Essentials</h3>
+                <p className="text-muted-foreground mb-6">Issued by Cisco Networking Academy — April 25, 2024</p>
+                <a
+                  href="/cybersecurity-certificate.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-primary text-primary-foreground font-medium hover:opacity-90 transition-all"
+                >
+                  <ShieldCheck className="w-4 h-4" /> Open Certificate
+                </a>
+              </div>
             </div>
             <div className="p-4 border-t flex justify-end">
               <a
